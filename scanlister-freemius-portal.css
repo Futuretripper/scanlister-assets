@@ -1,0 +1,221 @@
+/*
+ * ScanLister — Freemius Customer Portal CSS Customization
+ * Apply via: Freemius Dashboard → Stores → [Your Store] → Settings → Customer Portal → CSS Stylesheet URL
+ *
+ * Brand palette (from scanlister.com):
+ *   Primary Orange : #E8871A  — CTA buttons, accents, highlights
+ *   Dark Navy      : #0D1E3D  — Header, logo background, dark surfaces
+ *   Deep Blue      : #0A2B6B  — Gradient / secondary dark
+ *   White          : #FFFFFF  — Card backgrounds, light text
+ *   Light Gray     : #F5F7FA  — Page background
+ *   Body Text      : #1F2937  — Paragraphs, labels
+ */
+
+/* ============================================================
+   1. ROOT CSS VARIABLE OVERRIDES
+   ============================================================ */
+:root {
+  /* Replace Freemius brand blue with ScanLister orange */
+  --fs-ds-freemius-50:  #FEF3E7;
+  --fs-ds-freemius-100: #FCDDB0;
+  --fs-ds-freemius-200: #FAC778;
+  --fs-ds-freemius-300: #F4A843;
+  --fs-ds-freemius-400: #EE9520;
+  --fs-ds-freemius-500: #E8871A; /* PRIMARY ORANGE */
+  --fs-ds-freemius-600: #C46D0E;
+  --fs-ds-freemius-700: #9F5609;
+  --fs-ds-freemius-800: #7A4006;
+  --fs-ds-freemius-900: #552B03;
+
+  /* Neutral palette */
+  --fs-ds-neutral-10:  #F5F7FA;
+  --fs-ds-neutral-100: #E4E7EC;
+  --fs-ds-neutral-200: #D0D5DD;
+  --fs-ds-neutral-300: #98A2B3;
+  --fs-ds-neutral-400: #6B7280;
+  --fs-ds-neutral-500: #4B5563;
+  --fs-ds-neutral-600: #374151;
+  --fs-ds-neutral-700: #1F2937;
+  --fs-ds-neutral-800: #111827;
+  --fs-ds-neutral-900: #0D1E3D;
+}
+
+/* ============================================================
+   2. PAGE BACKGROUND
+   ============================================================ */
+body,
+.fs-app,
+.fs-page {
+  background-color: #F5F7FA !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: #1F2937 !important;
+}
+
+/* ============================================================
+   3. HEADER / NAV BAR
+   ============================================================ */
+.fs-header,
+.fs-nav,
+[class*="fs-header"],
+[class*="fs-top-bar"] {
+  background-color: #0D1E3D !important;
+  border-bottom: 3px solid #E8871A !important;
+}
+
+.fs-header .fs-store-name,
+.fs-header a,
+.fs-nav a {
+  color: #FFFFFF !important;
+}
+
+.fs-nav a:hover {
+  color: #E8871A !important;
+}
+
+/* ============================================================
+   4. PRIMARY BUTTONS (orange CTA — matches "Free Trial")
+   ============================================================ */
+.fs-button,
+.fs-btn,
+button[class*="fs-"],
+a[class*="fs-btn"],
+[class*="fs-button--primary"] {
+  background-color: #E8871A !important;
+  border-color: #E8871A !important;
+  color: #FFFFFF !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+.fs-button:hover,
+.fs-btn:hover,
+button[class*="fs-"]:hover,
+[class*="fs-button--primary"]:hover {
+  background-color: #C46D0E !important;
+  border-color: #C46D0E !important;
+}
+
+/* Secondary / outline buttons (matches "LOG IN" style) */
+[class*="fs-button--secondary"],
+[class*="fs-btn--secondary"] {
+  background-color: transparent !important;
+  border: 2px solid #E8871A !important;
+  color: #E8871A !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+}
+
+[class*="fs-button--secondary"]:hover {
+  background-color: #FEF3E7 !important;
+}
+
+/* ============================================================
+   5. LINKS
+   ============================================================ */
+a,
+.fs-link {
+  color: #E8871A !important;
+}
+
+a:hover,
+.fs-link:hover {
+  color: #C46D0E !important;
+  text-decoration: underline !important;
+}
+
+/* ============================================================
+   6. CARDS & PANELS
+   ============================================================ */
+.fs-card,
+.fs-panel,
+[class*="fs-card"],
+[class*="fs-section"] {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E4E7EC !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 4px rgba(13, 30, 61, 0.08) !important;
+}
+
+/* ============================================================
+   7. TYPOGRAPHY
+   ============================================================ */
+h1, h2, h3, h4, h5, h6,
+[class*="fs-title"],
+[class*="fs-heading"] {
+  color: #0D1E3D !important;
+  font-weight: 700 !important;
+}
+
+p, span, label,
+[class*="fs-label"],
+[class*="fs-description"] {
+  color: #1F2937 !important;
+}
+
+[class*="fs-muted"],
+[class*="fs-secondary"],
+small {
+  color: #6B7280 !important;
+}
+
+/* ============================================================
+   8. FORM INPUTS
+   ============================================================ */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea,
+[class*="fs-input"] {
+  border: 1px solid #D0D5DD !important;
+  border-radius: 6px !important;
+  background-color: #FFFFFF !important;
+  color: #0D1E3D !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+[class*="fs-input"]:focus {
+  border-color: #E8871A !important;
+  box-shadow: 0 0 0 3px rgba(232, 135, 26, 0.18) !important;
+  outline: none !important;
+}
+
+/* ============================================================
+   9. STATUS BADGES
+   ============================================================ */
+[class*="fs-badge--active"],
+[class*="fs-success"] {
+  background-color: #E8871A !important;
+  color: #FFFFFF !important;
+}
+
+[class*="fs-badge--cancelled"],
+[class*="fs-badge--expired"] {
+  background-color: #E4E7EC !important;
+  color: #6B7280 !important;
+}
+
+/* ============================================================
+   10. FOOTER
+   ============================================================ */
+.fs-footer,
+[class*="fs-footer"] {
+  background-color: #0D1E3D !important;
+  color: #D0D5DD !important;
+  border-top: 2px solid #E8871A !important;
+}
+
+.fs-footer a,
+[class*="fs-footer"] a {
+  color: #E8871A !important;
+}
+
+.fs-footer a:hover,
+[class*="fs-footer"] a:hover {
+  color: #F4A843 !important;
+}
